@@ -50,7 +50,8 @@ for filename in args.filenames:
                     intensity = sum(pixel)/3.
                     intensities.append(intensity)
             avg_intensity = (sum(intensities)/len(intensities))/255.
-            out_string += intensity_chrs[int(avg_intensity*len(intensity_chrs))]
+            intensity_index = min(len(intensity_chrs)-1, int(avg_intensity*len(intensity_chrs)))
+            out_string += intensity_chrs[intensity_index]
         out_string += "|\n"
     out_string = "|" + "-"*(width) + "|\n" + out_string + "|" + "-"*(width) + "|"
     print(out_string)
