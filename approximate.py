@@ -1,4 +1,5 @@
 from PIL import Image
+import sys
 import argparse
 
 LOW_DETAIL = " .:-=+*#%@"
@@ -22,7 +23,11 @@ if args.detail == "high":
     intensity_chrs = HIGH_DETAIL
 
 for filename in args.filenames:
-    img = Image.open(filename)
+    try:
+        img = Image.open(filename)
+    except FileNotFoundError:
+        sys.stderr.write("Error: File '%s' does not exist\n" % filename)
+        exit()
     px = img.load()
 
     width = args.width
