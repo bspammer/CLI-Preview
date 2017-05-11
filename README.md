@@ -8,7 +8,7 @@ Supports ASCII-art style previewing or full color if your terminal supports
 TrueColor.
 
 # Dependencies
-> Python Imaging Library (specifically the [pillow](https://python-pillow.org/) fork.)
+* Python Imaging Library (specifically the [pillow](https://python-pillow.org/) fork.)
 
 # Examples
 ![Fractal](https://i.imgur.com/2Wk6f15.png)
