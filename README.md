@@ -2,7 +2,10 @@
 Preview images on the command line
 
 A tool I created when I got annoyed at having to transfer images from a remote
-location accessed via `ssh`, just to see what `untitled.png` contained.
+location accessed via `ssh`, just to see what "untitled.png" contained.
+
+Supports ASCII-art style previewing or full color if your terminal supports
+TrueColor.
 
 Relies on the Python Imaging Library (specifically the[pillow](https://python-pillow.org/) fork.)
 
