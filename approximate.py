@@ -51,7 +51,7 @@ if __name__ == "__main__":
             height = int((width * img.height/img.width)/2)
 
         if img.width < width or img.height < height:
-            sys.stderr.write("Image too small")
+            sys.stderr.write("Error: Image too small")
             exit()
 
         out_string = ""
