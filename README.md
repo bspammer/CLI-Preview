@@ -7,7 +7,8 @@ location accessed via `ssh`, just to see what "untitled.png" contained.
 Supports ASCII-art style previewing or full color if your terminal supports
 TrueColor.
 
-Relies on the Python Imaging Library (specifically the [pillow](https://python-pillow.org/) fork.)
+# Dependencies
+> Python Imaging Library (specifically the [pillow](https://python-pillow.org/) fork.)
 
 # Examples
 ![Fractal](https://i.imgur.com/2Wk6f15.png)
