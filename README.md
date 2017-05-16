@@ -1,4 +1,4 @@
-# CLI-Preview
+# Image Show
 Preview images on the command line
 
 A tool I created when I got annoyed at having to transfer images from a remote
@@ -9,6 +9,12 @@ TrueColor.
 
 # Dependencies
 * Python Imaging Library (specifically the [pillow](https://python-pillow.org/) fork.)
+
+# Installation
+`cp imsh.py ~/bin/imsh`
+
+# Usage
+`imsh --color /path/to/some/image`
 
 # Examples
 ![Fractal](https://i.imgur.com/2Wk6f15.png)
