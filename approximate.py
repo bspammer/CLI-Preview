@@ -5,12 +5,12 @@ import argparse
 
 LOW_DETAIL = " .:-=+*#%@"
 HIGH_DETAIL = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
-TOP_LEFT = u"\u250f"
-TOP_RIGHT = u"\u2513"
-BOT_LEFT = u"\u2517"
-BOT_RIGHT = u"\u251b"
-VERTICAL = u"\u2503"
-HORIZONTAL = u"\u2501"
+TOP_LEFT = u"\u250c"
+TOP_RIGHT = u"\u2510"
+BOT_LEFT = u"\u2514"
+BOT_RIGHT = u"\u2518"
+VERTICAL = u"\u2502"
+HORIZONTAL = u"\u2500"
 
 parser = argparse.ArgumentParser(description="Approximate images on the command line.")
 parser.add_argument("filenames", type=str, nargs="+",
