@@ -25,6 +25,8 @@ parser.add_argument("-c", "--color", dest="color", action="store_true",
         help="Enable color output (truecolor terminals only)")
 parser.add_argument("-n", "--noborder", dest="border", action="store_false",
         default=True, help="Disable border around output")
+parser.add_argument("-r", "--resize", dest="resize", type=float,
+        help="Percentage to resize the image by")
 args = parser.parse_args()
 
 if args.detail == "low":
@@ -42,6 +44,9 @@ if __name__ == "__main__":
         except IOError:
             sys.stderr.write("Error: File '%s' does not exist\n" % filename)
             continue
+        if args.resize:
+            divisor = 100. / args.resize
+            img = img.resize((int(img.width/divisor), int(img.height/divisor)), Image.BILINEAR)
         px = img.getdata()
 
         width = args.width
