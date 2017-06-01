@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 from PIL import Image
 import sys
+import time
 import argparse
 
 LOW_DETAIL = " .:-=+*#%@"
@@ -42,6 +43,7 @@ def to_console_color_str(r, g, b):
 if __name__ == "__main__":
     keep_drawing = True
     while keep_drawing:
+        keep_drawing = False
         for filename in args.filenames:
             try:
                 img = Image.open(filename)
@@ -97,9 +99,7 @@ if __name__ == "__main__":
             + out_string \
             + (BOT_LEFT + HORIZONTAL*(width) + BOT_RIGHT)*args.border \
             + "\n"
-            if not args.watch:
-                sys.stdout.write(out_string.encode("utf-8"))
-                keep_drawing = False
-            else:
-                print(len(out_string))
-                #sys.stdout.write((out_string + "\b"*len(out_string)).encode("utf-8"))
+            if args.watch:
+                keep_drawing = True
+                time.sleep(0.5)
+            sys.stdout.write(out_string.encode("utf-8"))
